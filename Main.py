@@ -35,6 +35,28 @@ while player_choice <= 4 and player_choice >= 1:
         deployment1_passed = True
         combat_passed = True
     else:
-        print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn")
+        if deployment1_passed == False:
+            combat_passed == False
+            deployment2_passed == False
+            end_turn == False
+            print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn")
+        elif deployment1_passed == True:
+            combat_passed == False
+            deployment2_passed == False
+            end_turn == False
+            print("Invalid Selection, please select one of the following options \n2 Combat \n3 Deployment 2 \n4 End Turn") 
+        elif deployment1_passed == True:
+            combat_passed == True
+            deployment2_passed == False
+            end_turn == False
+            print("Invalid Selection, please select one of the following options \n3 Deployment 2 \n4 End Turn")
+        elif deployment1_passed == True:
+            combat_passed == True
+            deployment2_passed == True
+            print("All phases complete, please enter 4 to end turn")            
+            
     
     player_choice= int(input("Pick the phase you would like to go to "))
+
+
+print("Testing the merger \n\n\t\t\t Testing the merger")
