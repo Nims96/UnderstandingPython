@@ -5,10 +5,6 @@ print("\n" + b + c)
 
 print("Player 1 Begin")
 
-print("\n1: Deployment \n2: Combat \n3: Deployment 2 \n4: End Turn \n5: Show board \n6: Show hand")
-
-player_choice= int(input("Pick the phase you would like to go to "))
-
 player1_hand = ["Rathalos", "Ruby", "Emerald"]
 
 player1_creature_zone = ["Rathian"]
@@ -24,14 +20,14 @@ player2_used_resources = ["Sapphire", "Sapphire", "Sapphire"]
 player2_unused_resources = ["Sapphire", "Sapphire"]
 
 def loop_player():
-    print("\n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn")
+    print("\n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
     player_choice= int(input("Pick the phase you would like to go to "))
     deployment1_passed = False
     combat_passed = False
     deployment2_passed = False
     end_turn = False
     while player_choice > 6 or player_choice < 1:
-        print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn")
+        print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
         player_choice= int(input("Pick the phase you would like to go to "))
 
     while player_choice <= 6 and player_choice >= 1:
@@ -76,21 +72,21 @@ def loop_player():
             print(player1_hand)
         else:
             if deployment1_passed == False and combat_passed == False and deployment2_passed == False and end_turn == False:
-               print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn")
+               print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
             elif deployment1_passed == True and combat_passed == False and deployment2_passed == False and end_turn == False:
-               print("Invalid Selection, please select one of the following options \n2 Combat \n3 Deployment 2 \n4 End Turn")
+               print("Invalid Selection, please select one of the following options \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
             elif deployment1_passed == True and combat_passed == True and deployment2_passed == False and end_turn == False:
-                print("Invalid Selection, please select one of the following options \n3 Deployment 2 \n4 End Turn")
+                print("Invalid Selection, please select one of the following options \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
             elif deployment1_passed == True and combat_passed == True and deployment2_passed == True and end_turn == False:
                 print("Invalid Selection, you must select \n4 End Turn")
             else:
-                print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn")
+                print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
         
         player_choice= int(input("Pick the phase you would like to go to "))
 
         if player_choice > 6 or player_choice < 1:
             while player_choice > 6 or player_choice < 1:
-                print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn")
+                print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
                 player_choice= int(input("Pick the phase you would like to go to "))
 
 #menu display bugs when board options are selected
