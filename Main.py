@@ -93,6 +93,6 @@ def loop_player():
                 print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn")
                 player_choice= int(input("Pick the phase you would like to go to "))
 
-
+#menu display bugs when board options are selected
 
 loop_player()
