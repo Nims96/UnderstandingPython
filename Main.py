@@ -8,7 +8,7 @@ print("\n" + b + c)
 print("Player 1 Begin")
 
 player1_hand = ["Rathalos", "Ruby", "Emerald"]
-player1_creature_zone = ["Rathian"]
+player1_creature_zone = ["Rathian", "Rathalos"]
 player1_resource_zone = ["Ruby", "Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emerald"]
 player1_used_resources = ["Ruby"]
 player1_unused_resources = ["Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emerald"]
@@ -49,7 +49,7 @@ def inner_options(phase_number):
         print("4: Proceed to Next Phase")
         print("5: Show Hand")
         
-        inner_phase_choice = int(input("Pick the phase you would like to go to "))
+        inner_phase_choice = int(input("Please select an action you would like to take: "))
 
         while True:
             if inner_phase_choice == 1:
@@ -64,13 +64,13 @@ def inner_options(phase_number):
                 print("Here is your hand")
                 print(player1_hand)
             else:
-                print("That is not a valid choice. Please select one of the following:")
+                print("That is not a valid choice. Please select one of the following: ")
                 print("1: Play a creature")
                 print("2: Play a resource")
                 print("3: Play a spell")
                 print("4: Proceed to Next Phase")
                 print("5: Show Hand")
-                inner_phase_choice = int(input("Select one of the above actions to take"))
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
     elif phase_number == 2:
         print("Here are your creatures: " + str(player1_creature_zone))
         print("Here are your opponents creatures: " + str(player2_creature_zone))
@@ -79,8 +79,29 @@ def inner_options(phase_number):
         print("2: Skip attacking")
         print("3: Show boards")
 
+        inner_phase_choice = int(input("Please select an action you would like to take: "))
         
-
+        while True:
+            if inner_phase_choice == 1:
+                print("Here are your creatures: " + str(player1_creature_zone) + "\n")
+                print("Here are your opponents creatures: " + str(player2_creature_zone) + "\n")
+                print("Please select which creature you want to attack with")
+                
+                for x in range(0, len(player1_creature_zone)):
+                    print(str(x + 1) + ": " + player1_creature_zone[x])
+                    
+                break
+            elif inner_phase_choice == 2:
+                print("Attack phase skipped")
+                break
+            elif inner_phase_choice == 3:
+                show_board()
+            else:
+                print("That is not a valid choice. Please select one of the following: ")
+                print("1: Select creatures you want to attack with")
+                print("2: Skip attacking")
+                print("3: Show boards")
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
 
 
 def loop_player():
@@ -145,3 +166,4 @@ def loop_player():
 #menu display bugs when board options are selected
 
 loop_player()
+inner_options(2)
