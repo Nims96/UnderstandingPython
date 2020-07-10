@@ -108,7 +108,67 @@ def inner_options(phase_number):
                 print("2: Skip attacking")
                 print("3: Show boards")
                 inner_phase_choice = int(input("Select one of the above actions to take: "))
+    elif phase_number == 3:
+        print("Here is/are the card/cards in your hand")
+        print(player1_hand)
+        
+        print("1: Play a creature")
+        print("2: Play a resource")
+        print("3: Play a spell")
+        print("4: Proceed to Next Phase")
+        print("5: Show Hand")
+        
+        inner_phase_choice = int(input("Please select an action you would like to take: "))
 
+        while True:
+            if inner_phase_choice == 1:
+                print("Select a creature from your hand that you would like to play")
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
+            elif inner_phase_choice == 2:
+                print("Select a resource from your hand that you would like to play")
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
+            elif inner_phase_choice == 3:
+                print("Select a spell from your hand that you would like to play")
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
+            elif inner_phase_choice == 4:
+                break
+            elif inner_phase_choice == 5:
+                print("Here is your hand")
+                print(player1_hand)
+
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
+            else:
+                print("That is not a valid choice. Please select one of the following: ")
+                print("1: Play a creature")
+                print("2: Play a resource")
+                print("3: Play a spell")
+                print("4: Proceed to Next Phase")
+                print("5: Show Hand")
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
+    elif phase_number == 4:
+        print("You are about to end your turn")
+
+        print("1: Show board")
+        print("2: Show hand")
+        print("3: Proceed to end")
+
+        inner_phase_choice = int(input("Please select an action you would like to take: "))
+
+        if inner_phase_choice == 1:
+            show_board()
+            inner_phase_choice = int(input("Please select an action you would like to take: "))
+        elif inner_phase_choice == 2:
+            print(player1_hand)
+            inner_phase_choice = int(input("Please select an action you would like to take: "))
+        elif inner_phase_choice == 3:
+            print("About to end turn")
+        else:
+            print("That is not a valid choice. Please select one of the following: ")
+            print("1: Show board")
+            print("2: Show hand")
+            print("3: Proceed to end")
+            inner_phase_choice = int(
+                input("Select one of the above actions to take: "))
 
 def loop_player():
     print("\n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
