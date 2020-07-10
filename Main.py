@@ -54,15 +54,20 @@ def inner_options(phase_number):
         while True:
             if inner_phase_choice == 1:
                 print("Select a creature from your hand that you would like to play")
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
             elif inner_phase_choice == 2:
                 print("Select a resource from your hand that you would like to play")
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
             elif inner_phase_choice == 3:
                 print("Select a spell from your hand that you would like to play")
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
             elif inner_phase_choice == 4:
                 break
             elif inner_phase_choice == 5:
                 print("Here is your hand")
                 print(player1_hand)
+
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
             else:
                 print("That is not a valid choice. Please select one of the following: ")
                 print("1: Play a creature")
@@ -96,6 +101,7 @@ def inner_options(phase_number):
                 break
             elif inner_phase_choice == 3:
                 show_board()
+                inner_phase_choice = int(input("Select one of the above actions to take: "))
             else:
                 print("That is not a valid choice. Please select one of the following: ")
                 print("1: Select creatures you want to attack with")
@@ -165,5 +171,5 @@ def loop_player():
 
 #menu display bugs when board options are selected
 
-loop_player()
+#loop_player()
 inner_options(2)
