@@ -246,11 +246,4 @@ def loop_player():
                 print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
                 phase_choice = valid_entry()
 
-<<<<<<< HEAD
 loop_player()
-=======
-#menu display bugs when board options are selected
-
-#loop_player()
-inner_options(2)
->>>>>>> origin/inner-options
