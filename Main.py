@@ -170,17 +170,34 @@ def inner_options(phase_number):
             inner_phase_choice = int(
                 input("Select one of the above actions to take: "))
 
+def valid_entry():
+    test = 0
+    phase_choice = input()
+
+    while test == 0:
+        if phase_choice.isalpha() == True:
+            print("You must select a number to take action")
+            phase_choice = input("Pick the phase you would like to go to ")
+        elif phase_choice.isdigit() == True:
+            phase_choice = int(phase_choice)
+            test = 1
+            return phase_choice
+        else:
+            print("You have selected nothing, Please make a choice:")
+            print("You must select a number to take action")
+            phase_choice = input("Please select one of the above options: ")
+
 def loop_player():
     print("\n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
-    phase_choice = int(input("Pick the phase you would like to go to "))
-    
     deployment1_passed = False
     combat_passed = False
     deployment2_passed = False
 
+    phase_choice = valid_entry()
+
     while phase_choice > 6 or phase_choice < 1:
         print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
-        phase_choice = int(input("Pick the phase you would like to go to "))
+        phase_choice= valid_entry()
 
     while phase_choice <= 6 and phase_choice >= 1:
         if phase_choice == 1 and deployment1_passed == False:
@@ -221,13 +238,13 @@ def loop_player():
                 print("Invalid Selection, you must select \n4 End Turn")
             else:
                 print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
-        
-        phase_choice= int(input("Pick the phase you would like to go to "))
+            
+        phase_choice = valid_entry()
 
         if phase_choice > 6 or phase_choice < 1:
             while phase_choice > 6 or phase_choice < 1:
                 print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
-                phase_choice = int(input("Pick the phase you would like to go to "))
+                phase_choice = valid_entry()
 
 #menu display bugs when board options are selected
 
