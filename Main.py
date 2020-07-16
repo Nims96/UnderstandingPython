@@ -54,6 +54,29 @@ def inner_actions_menu(phase):
 
     print("Please select an action you would like to take: ")
 
+
+def outer_actions_menu(phase):
+    print("\nHere are the actions you can perform in this phase:\n")
+
+
+    if phase == 1:
+        print("2: Combat Phase")
+        print("3: Deployment Phase 2")
+        print("4: End Phase")
+        print("5: Show board")
+        print("6: Show Hand")
+    elif phase == 2:
+        print("3: Deployment Phase 2")
+        print("4: End Turn")
+        print("5: Show board")
+        print("6: Show Hand")
+    elif phase == 3:
+        print("4: End Turn")
+        print("5: Show board")
+        print("6: Show Hand")
+
+    print("Please select an action you would like to take: ")
+
 def show_board():
     print("\nHere is the board")
     print("Your creatures: " + str(player1_creature_zone))
@@ -228,17 +251,20 @@ def loop_player():
             print("You are now in Deployment 1")
             """Deployment stuff"""
             inner_options(phase_choice)
+            outer_actions_menu(phase_choice)
             deployment1_passed = True
         elif phase_choice == 2 and combat_passed == False:
             print("You are now in the combat step")
             """Combat Stuff"""
             inner_options(phase_choice)
+            outer_actions_menu(phase_choice)
             combat_passed = True
             deployment1_passed = True
         elif phase_choice == 3 and deployment2_passed == False:
             """Deployment 2 Stuff"""
             print("You are now in Deployment 2")
             inner_options(phase_choice)
+            outer_actions_menu(phase_choice)
             deployment2_passed = True
             deployment1_passed = True
             combat_passed = True
