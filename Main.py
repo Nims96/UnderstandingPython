@@ -1,3 +1,8 @@
+from Player import player_class
+
+player1 = player_class(True,2)
+player2 = player_class(False,2)
+
 a = "Welcome to the game"
 b = a.center(75)
 c = "\n\n\tDefeat your enemy by reducing their life to 0 or they cannot draw. \n\t\t\tEnter a number to move to phase\n"
@@ -5,17 +10,23 @@ print("\n" + b + c)
 
 print("Player 1 Begin")
 
-player1_hand = ["Rathalos", "Ruby", "Emerald"]
+player1.hand = ["Rathalos", "Ruby", "Emerald"]
 player1_creature_zone = ["Rathian", "Rathalos"]
 player1_resource_zone = ["Ruby", "Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emerald"]
 player1_used_resources = ["Ruby"]
 player1_unused_resources = ["Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emerald"]
+player1.deck = ["Rathalos", "Rathian", "Ruby", "Emerald","Rathalos", "Rathian", "Ruby", "Emerald"]
+player1.discard = ["Rathalos", "Rathian"]
+player1.banished = ["Rathalos", "Rathian"]
 
-player2_hand = ["Frozen Bite", "Hurl Snow-Boulder", "Barioth"]
+player2.hand = ["Frozen Bite", "Hurl Snow-Boulder", "Barioth"]
 player2_creature_zone = ["Barioth"]
 player2_resource_zone = ["Sapphire", "Sapphire", "Sapphire", "Sapphire", "Sapphire"]
 player2_used_resources = ["Sapphire", "Sapphire", "Sapphire"]
 player2_unused_resources = ["Sapphire", "Sapphire"]
+player2.deck = ["Barioth", "Barioth", "Sapphire", "Sapphire", "Frozen Bite", "Hurl Snow-Boulder", "Sapphire", "Sapphire"]
+player2.discard = ["Barioth", "Frozen Bite"]
+player2.banished = ["Barioth", "Frozen Bite"]
 
 def valid_entry():
     test = 0
@@ -131,7 +142,7 @@ def show_board():
 
     print("\n\nHere is you opponents board")
     print("Your opponent has " +
-          str(len(player2_hand)) + " cards in hand")
+          str(len(player2.hand)) + " cards in hand")
     print("Your opponents creatures: " + str(player2_creature_zone))
     print("Your opponents total resources are: " +
           str(player2_resource_zone))
@@ -143,7 +154,7 @@ def show_board():
 def inner_options(phase_number):
     if phase_number == 1:
         print("Here is/are the card/cards in your hand")
-        print(player1_hand)
+        print(player1.hand)
 
         inner_actions_menu(phase_number)
 
@@ -170,7 +181,7 @@ def inner_options(phase_number):
 
             elif inner_phase_choice == 5:
                 print("Here is your hand")
-                print(player1_hand)
+                print(player1.hand)
                 
                 inner_actions_menu(phase_number)
                 inner_phase_choice = valid_entry()
@@ -217,7 +228,7 @@ def inner_options(phase_number):
                 inner_phase_choice = valid_entry()
     elif phase_number == 3:
         print("Here is/are the card/cards in your hand")
-        print(player1_hand)
+        print(player1.hand)
         
         inner_actions_menu(phase_number)
 
@@ -243,7 +254,7 @@ def inner_options(phase_number):
 
             elif inner_phase_choice == 5:
                 print("Here is your hand")
-                print(player1_hand)
+                print(player1.hand)
 
                 inner_actions_menu(phase_number)
 
@@ -267,7 +278,7 @@ def inner_options(phase_number):
 
             elif inner_phase_choice == 2:
                 print("Here is your hand: ")
-                print(player1_hand)
+                print(player1.hand)
                 inner_actions_menu(phase_number)
                 inner_phase_choice = valid_entry()
 
@@ -326,7 +337,8 @@ def loop_player():
             outer_actions_menu(phase_choice, deployment1_passed, combat_passed, deployment2_passed)
         elif phase_choice == 6:
             print("Here is/are the card/cards in your hand")
-            print(player1_hand)
+            print(player1.hand)
+
             outer_actions_menu(phase_choice, deployment1_passed, combat_passed, deployment2_passed)
         else:
             if deployment1_passed == False and combat_passed == False and deployment2_passed == False:
@@ -347,11 +359,25 @@ def loop_player():
                 print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
                 phase_choice = valid_entry()
 
-player_health = 4
-
-player1 = True
-Player2 = False
-
-while player_health != 0:
+while player1.health > 0 and player2.health > 0:
     loop_player()
-    player_health -= 1
+    if player1.player_turn == True:
+        player1.health -= 1
+        player1.player_turn = False
+        player2.player_turn = True
+        if player1.health <= 0:
+            print("Player 2 Victory!")
+        elif player2.health <= 0:
+            print("Player 1 Victory!")
+        elif player1.health > 0 and player2.health > 0:
+            print("Player 2's Turn")
+    elif player2.player_turn == True:
+        player2.health -= 1
+        player1.player_turn = True
+        player2.player_turn = False
+        if player1.health <= 0:
+            print("Player 2 Victory!")
+        elif player2.health <= 0:
+            print("Player 1 Victory!")
+        elif player1.health > 0 and player2.health > 0:
+            print("Player 1's Turn")
