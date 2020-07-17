@@ -1,7 +1,33 @@
 from Player import player_class
+from Card import *
 
 player1 = player_class(True,2)
 player2 = player_class(False,2)
+
+c1 = Creature("Narga", "Emerald", 70, 100, 
+        [2, "Emerald", "Emerald"], False)
+
+print(c1.name)
+print(c1.faction)
+print(c1.attack)
+print(c1.hp)
+print(c1.cost)
+print(c1.is_tapped)
+
+s1 = Spell("Tail Slam", "Emerald", [2, "Emerald"], "Deal 3 damage to target creature.")
+
+
+print(s1.name)
+print(s1.faction)
+print(s1.cost)
+print(s1.effect)
+
+
+r1 = Resource("Emerald", "Emerald", False)
+
+print(r1.name)
+print(r1.faction)
+print(r1.is_tapped)
 
 a = "Welcome to the game"
 b = a.center(75)
