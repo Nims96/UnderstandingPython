@@ -279,16 +279,25 @@ def loop_player():
                 print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
                 phase_choice = valid_entry()
 
-
-while player1.health and player2.health != 0: 
+while player1.health > 0 and player2.health > 0:
     loop_player()
-    player1.health -= 1
-    player2.health -= 1
     if player1.player_turn == True:
-        print("Player 2's Turn")
+        player1.health -= 1
         player1.player_turn = False
         player2.player_turn = True
+        if player1.health <= 0:
+            print("Player 2 Victory!")
+        elif player2.health <= 0:
+            print("Player 1 Victory!")
+        elif player1.health > 0 and player2.health > 0:
+            print("Player 2's Turn")
     elif player2.player_turn == True:
-        print("Player 1's Turn")
+        player2.health -= 1
         player1.player_turn = True
         player2.player_turn = False
+        if player1.health <= 0:
+            print("Player 2 Victory!")
+        elif player2.health <= 0:
+            print("Player 1 Victory!")
+        elif player1.health > 0 and player2.health > 0:
+            print("Player 1's Turn")
