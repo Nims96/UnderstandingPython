@@ -10,7 +10,7 @@ print("\n" + b + c)
 
 print("Player 1 Begin")
 
-player1_hand = ["Rathalos", "Ruby", "Emerald"]
+player1.hand = ["Rathalos", "Ruby", "Emerald"]
 player1_creature_zone = ["Rathian", "Rathalos"]
 player1_resource_zone = ["Ruby", "Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emerald"]
 player1_used_resources = ["Ruby"]
@@ -80,7 +80,7 @@ def show_board():
 def inner_options(phase_number):
     if phase_number == 1:
         print("Here is/are the card/cards in your hand")
-        print(player1_hand)
+        print(player1.hand)
 
         inner_actions_menu(phase_number)
 
@@ -107,7 +107,7 @@ def inner_options(phase_number):
 
             elif inner_phase_choice == 5:
                 print("Here is your hand")
-                print(player1_hand)
+                print(player1.hand)
                 
                 inner_actions_menu(phase_number)
                 inner_phase_choice = valid_entry()
@@ -154,7 +154,7 @@ def inner_options(phase_number):
                 inner_phase_choice = valid_entry()
     elif phase_number == 3:
         print("Here is/are the card/cards in your hand")
-        print(player1_hand)
+        print(player1.hand)
         
         inner_actions_menu(phase_number)
 
@@ -180,7 +180,7 @@ def inner_options(phase_number):
 
             elif inner_phase_choice == 5:
                 print("Here is your hand")
-                print(player1_hand)
+                print(player1.hand)
 
                 inner_actions_menu(phase_number)
 
@@ -204,7 +204,7 @@ def inner_options(phase_number):
 
             elif inner_phase_choice == 2:
                 print("Here is your hand: ")
-                print(player1_hand)
+                print(player1.hand)
                 inner_actions_menu(phase_number)
                 inner_phase_choice = valid_entry()
 
@@ -259,7 +259,7 @@ def loop_player():
             show_board()
         elif phase_choice == 6:
             print("Here is/are the card/cards in your hand")
-            print(player1_hand)
+            print(player1.hand)
         else:
             if deployment1_passed == False and combat_passed == False and deployment2_passed == False:
                print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
