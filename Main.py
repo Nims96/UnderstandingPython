@@ -1,3 +1,8 @@
+from Player import player_class
+
+player1 = player_class(True,2)
+player2 = player_class(False,2)
+
 a = "Welcome to the game"
 b = a.center(75)
 c = "\n\n\tDefeat your enemy by reducing their life to 0 or they cannot draw. \n\t\t\tEnter a number to move to phase\n"
@@ -274,11 +279,16 @@ def loop_player():
                 print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
                 phase_choice = valid_entry()
 
-player_health = 4
 
-player1 = True
-Player2 = False
-
-while player_health != 0:
+while player1.health and player2.health != 0: 
     loop_player()
-    player_health -= 1
+    player1.health -= 1
+    player2.health -= 1
+    if player1.player_turn == True:
+        print("Player 2's Turn")
+        player1.player_turn = False
+        player2.player_turn = True
+    elif player2.player_turn == True:
+        print("Player 1's Turn")
+        player1.player_turn = True
+        player2.player_turn = False
