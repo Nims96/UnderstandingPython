@@ -15,12 +15,18 @@ player1_creature_zone = ["Rathian", "Rathalos"]
 player1_resource_zone = ["Ruby", "Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emerald"]
 player1_used_resources = ["Ruby"]
 player1_unused_resources = ["Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emerald"]
+player1.deck = ["Rathalos", "Rathian", "Ruby", "Emerald","Rathalos", "Rathian", "Ruby", "Emerald"]
+player1.discard = ["Rathalos", "Rathian"]
+player1.banished = ["Rathalos", "Rathian"]
 
-player2_hand = ["Frozen Bite", "Hurl Snow-Boulder", "Barioth"]
+player2.hand = ["Frozen Bite", "Hurl Snow-Boulder", "Barioth"]
 player2_creature_zone = ["Barioth"]
 player2_resource_zone = ["Sapphire", "Sapphire", "Sapphire", "Sapphire", "Sapphire"]
 player2_used_resources = ["Sapphire", "Sapphire", "Sapphire"]
 player2_unused_resources = ["Sapphire", "Sapphire"]
+player2.deck = ["Barioth", "Barioth", "Sapphire", "Sapphire", "Frozen Bite", "Hurl Snow-Boulder", "Sapphire", "Sapphire"]
+player2.discard = ["Barioth", "Frozen Bite"]
+player2.banished = ["Barioth", "Frozen Bite"]
 
 def valid_entry():
     test = 0
@@ -68,7 +74,7 @@ def show_board():
 
     print("\n\nHere is you opponents board")
     print("Your opponent has " +
-          str(len(player2_hand)) + " cards in hand")
+          str(len(player2.hand)) + " cards in hand")
     print("Your opponents creatures: " + str(player2_creature_zone))
     print("Your opponents total resources are: " +
           str(player2_resource_zone))
