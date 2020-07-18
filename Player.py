@@ -6,5 +6,6 @@ class player_class:
         self.deck = []
         self.discard = []
         self.banished = []
+        self.resource_pool = []
 
 
