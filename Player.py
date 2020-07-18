@@ -3,5 +3,8 @@ class player_class:
         self.health = health
         self.player_turn = player_turn
         self.hand = []
+        self.deck = []
+        self.discard = []
+        self.banished = []
 
 
