@@ -297,6 +297,10 @@ while player1.health > 0 and player2.health > 0 and len(player1.deck) > 0 and le
             print("Player 2 Victory!")
         elif player2.health <= 0:
             print("Player 1 Victory!")
+        elif len(player1.deck) <= 0:
+            print("Player 2 Victory!")
+        elif len(player2.deck) <= 0:
+            print("Player 1 Victory!")    
         elif player1.health > 0 and player2.health > 0:
             print("Player 2's Turn")
     elif player2.player_turn == True:
@@ -307,5 +311,9 @@ while player1.health > 0 and player2.health > 0 and len(player1.deck) > 0 and le
             print("Player 2 Victory!")
         elif player2.health <= 0:
             print("Player 1 Victory!")
+        elif len(player1.deck) <= 0:
+            print("Player 2 Victory!")
+        elif len(player2.deck) <= 0:
+            print("Player 1 Victory!")    
         elif player1.health > 0 and player2.health > 0:
             print("Player 1's Turn")
