@@ -18,6 +18,7 @@ player1_unused_resources = ["Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emera
 player1.deck = ["Rathalos", "Rathian", "Ruby", "Emerald","Rathalos", "Rathian", "Ruby", "Emerald"]
 player1.discard = ["Rathalos", "Rathian"]
 player1.banished = ["Rathalos", "Rathian"]
+player1.resource_pool = ["Ruby", "Emerald"]
 
 player2.hand = ["Frozen Bite", "Hurl Snow-Boulder", "Barioth"]
 player2_creature_zone = ["Barioth"]
@@ -27,6 +28,7 @@ player2_unused_resources = ["Sapphire", "Sapphire"]
 player2.deck = ["Barioth", "Barioth", "Sapphire", "Sapphire", "Frozen Bite", "Hurl Snow-Boulder", "Sapphire", "Sapphire"]
 player2.discard = ["Barioth", "Frozen Bite"]
 player2.banished = ["Barioth", "Frozen Bite"]
+player2.resource_pool = ["Sapphire", "Sapphire"]
 
 def valid_entry():
     test = 0
