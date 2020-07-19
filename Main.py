@@ -1,4 +1,5 @@
 from Player import player_class
+from Card import *
 
 player1 = player_class(True,2)
 player2 = player_class(False,2)
@@ -64,6 +65,74 @@ def inner_actions_menu(phase):
         print("1: Show board")
         print("2: Show hand")
         print("3: Proceed to end\n")
+
+    print("Please select an action you would like to take: ")
+
+
+def outer_actions_menu(phase, dep1, combat, dep2):
+    print("\nHere are the actions you can perform in this phase:\n")
+
+    if phase == 1:
+        print("2: Combat Phase")
+        print("3: Deployment Phase 2")
+        print("4: End Phase")
+        print("5: Show board")
+        print("6: Show Hand")
+    elif phase == 2:
+        print("3: Deployment Phase 2")
+        print("4: End Turn")
+        print("5: Show board")
+        print("6: Show Hand")
+    elif phase == 3:
+        print("4: End Turn")
+        print("5: Show board")
+        print("6: Show Hand")
+    elif phase == 5:
+        if  dep1 == False and combat == False and dep2 == False:
+            print("1: Deployment Phase 1")
+            print("2: Combat Phase")
+            print("3: Deployment Phase 2")
+            print("4: End Phase")
+            print("5: Show board")
+            print("6: Show Hand")
+        elif dep1 == True and combat == False and dep2 == False:
+            print("2: Combat Phase")
+            print("3: Deployment Phase 2")
+            print("4: End Phase")
+            print("5: Show board")
+            print("6: Show Hand")
+        elif dep1 == True and combat == True and dep2 == False:
+            print("3: Deployment Phase 2")
+            print("4: End Turn")
+            print("5: Show board")
+            print("6: Show Hand")
+        else:
+            print("4: End Turn")
+            print("5: Show board")
+            print("6: Show Hand")
+    elif phase == 6:
+        if  dep1 == False and combat == False and dep2 == False:
+            print("1: Deployment Phase 1")
+            print("2: Combat Phase")
+            print("3: Deployment Phase 2")
+            print("4: End Phase")
+            print("5: Show board")
+            print("6: Show Hand")
+        elif dep1 == True and combat == False and dep2 == False:
+            print("2: Combat Phase")
+            print("3: Deployment Phase 2")
+            print("4: End Phase")
+            print("5: Show board")
+            print("6: Show Hand")
+        elif dep1 == True and combat == True and dep2 == False:
+            print("3: Deployment Phase 2")
+            print("4: End Turn")
+            print("5: Show board")
+            print("6: Show Hand")
+        else:
+            print("4: End Turn")
+            print("5: Show board")
+            print("6: Show Hand")
 
     print("Please select an action you would like to take: ")
 
@@ -241,17 +310,20 @@ def loop_player():
             print("You are now in Deployment 1")
             """Deployment stuff"""
             inner_options(phase_choice)
+            outer_actions_menu(phase_choice, deployment1_passed, combat_passed, deployment2_passed)
             deployment1_passed = True
         elif phase_choice == 2 and combat_passed == False:
             print("You are now in the combat step")
             """Combat Stuff"""
             inner_options(phase_choice)
+            outer_actions_menu(phase_choice, deployment1_passed, combat_passed, deployment2_passed)
             combat_passed = True
             deployment1_passed = True
         elif phase_choice == 3 and deployment2_passed == False:
             """Deployment 2 Stuff"""
             print("You are now in Deployment 2")
             inner_options(phase_choice)
+            outer_actions_menu(phase_choice, deployment1_passed, combat_passed, deployment2_passed)
             deployment2_passed = True
             deployment1_passed = True
             combat_passed = True
@@ -265,9 +337,12 @@ def loop_player():
             break
         elif phase_choice == 5:
             show_board()
+            outer_actions_menu(phase_choice, deployment1_passed, combat_passed, deployment2_passed)
         elif phase_choice == 6:
             print("Here is/are the card/cards in your hand")
             print(player1.hand)
+
+            outer_actions_menu(phase_choice, deployment1_passed, combat_passed, deployment2_passed)
         else:
             if deployment1_passed == False and combat_passed == False and deployment2_passed == False:
                print("Invalid Selection, please select one of the following options \n1 Deployment \n2 Combat \n3 Deployment 2 \n4 End Turn \n5 Show Board \n6 Show Hand")
