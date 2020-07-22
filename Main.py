@@ -1,5 +1,7 @@
 from Player import player_class
 
+import itertools, random
+
 player1 = player_class(True,2)
 player2 = player_class(False,2)
 
@@ -29,6 +31,14 @@ player2.deck = ["Barioth", "Barioth", "Sapphire", "Sapphire", "Frozen Bite", "Hu
 player2.discard = ["Barioth", "Frozen Bite"]
 player2.banished = ["Barioth", "Frozen Bite"]
 player2.resource_pool = ["Sapphire", "Sapphire"]
+
+def deck_shuffle(player):
+    random.shuffle(player.deck)
+
+deck_shuffle(player1)
+deck_shuffle(player2)
+print(player1.deck)
+print(player2.deck)
 
 def valid_entry():
     test = 0
