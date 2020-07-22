@@ -13,7 +13,10 @@ class Card_class:
         if card.is_tapped == True:
             untap_list.append(tap_list[position])
             tap_list.pop(position)
-            card.is_tapped = False      
+            card.is_tapped = False
+
+    #def cost_requirement(self, card):
+
 
 class Creature(Card_class):
     def __init__(self, name, faction, attack, hp, cost, is_tapped):
