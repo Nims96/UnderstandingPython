@@ -8,43 +8,6 @@ def list_iterator(zone):
     for x in zone:
         print(x.name)
 
-
-c1 = Creature("Narga", "Emerald", 70, 100, 
-        [2, "Emerald", "Emerald"], False)
-
-c2 = Creature("Barioth", "Saphire", 70, 100, 
-        [2, "Emerald", "Emerald"], True)
-
-player1.creature_untapped = [c1]
-
-player1.creature_tapped = [c2]
-
-print("untapped: ")
-list_iterator(player1.creature_untapped)
-print()
-print("tapped: ")
-list_iterator(player1.creature_tapped)
-print()
-c1.tap(c1, player1.creature_untapped, player1.creature_tapped, 0)
-
-print("untapped: ")
-list_iterator(player1.creature_untapped)
-print()
-print("tapped: ")
-list_iterator(player1.creature_tapped)
-print()
-
-c1.untap(c1, player1.creature_untapped, player1.creature_tapped, 0)
-c2.untap(c2, player1.creature_untapped, player1.creature_tapped, 0)
-
-print("Post untap")
-
-print("untapped: ")
-list_iterator(player1.creature_untapped)
-print()
-print("tapped: ")
-list_iterator(player1.creature_tapped)
-
 a = "Welcome to the game"
 b = a.center(75)
 c = "\n\n\tDefeat your enemy by reducing their life to 0 or they cannot draw. \n\t\t\tEnter a number to move to phase\n"
