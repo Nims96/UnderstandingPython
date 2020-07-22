@@ -3,6 +3,18 @@ class Card_class:
         self.name = name
         self.faction = faction
 
+    def tap(self, card, untap_list, tap_list, position):
+        if card.is_tapped == False:
+            tap_list.append(untap_list[position])
+            untap_list.pop(position)
+            card.is_tapped = True
+
+    def untap(self, card, untap_list, tap_list, position):
+        if card.is_tapped == True:
+            untap_list.append(tap_list[position])
+            tap_list.pop(position)
+            card.is_tapped = False      
+
 class Creature(Card_class):
     def __init__(self, name, faction, attack, hp, cost, is_tapped):
         super().__init__(name, faction)
