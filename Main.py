@@ -3,8 +3,6 @@ from Card import *
 
 import itertools, random
 
-import itertools, random
-
 player1 = player_class(True,2)
 player2 = player_class(False,2)
 
