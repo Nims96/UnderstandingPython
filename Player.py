@@ -10,5 +10,6 @@ class player_class:
         self.resource_untapped = []
         self.discard = []
         self.banished = []
+        self.resource_pool = []
 
 

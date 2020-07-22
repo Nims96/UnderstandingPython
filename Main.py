@@ -8,21 +8,29 @@ def list_iterator(zone):
     for x in zone:
         print(x.name)
 
-a = "Welcome to the game"
+c1 = Creature("Narga", "Emerald", 70, 100, 
+        [2, "Emerald", "Emerald"], False)
+
+r1 = Resource("Emerald", "Emerald", False)
+
+
+""" a = "Welcome to the game"
 b = a.center(75)
 c = "\n\n\tDefeat your enemy by reducing their life to 0 or they cannot draw. \n\t\t\tEnter a number to move to phase\n"
 print("\n" + b + c)
 
-print("Player 1 Begin")
+print("Player 1 Begin") """
 
 player1.hand = ["Rathalos", "Ruby", "Emerald"]
 player1_creature_zone = ["Rathian", "Rathalos"]
-player1_resource_zone = ["Ruby", "Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emerald"]
-player1_used_resources = ["Ruby"]
-player1_unused_resources = ["Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emerald"]
+player1_resource_zone = ["Ruby", "Ruby", "Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emerald", "Emerald", "Emerald"]
+player1.resource_tapped = ["Ruby", "Emerald", "Emerald", "Ruby"]
+player1.resource_untapped = ["Ruby", "Ruby", "Ruby", "Emerald", "Emerald", "Emerald"]
 player1.deck = ["Rathalos", "Rathian", "Ruby", "Emerald","Rathalos", "Rathian", "Ruby", "Emerald"]
 player1.discard = ["Rathalos", "Rathian"]
 player1.banished = ["Rathalos", "Rathian"]
+
+c1.cost_requirement(c1, player1)
 
 player2.hand = ["Frozen Bite", "Hurl Snow-Boulder", "Barioth"]
 player2_creature_zone = ["Barioth"]
@@ -142,8 +150,8 @@ def show_board():
     print("\nHere is the board")
     print("Your creatures: " + str(player1_creature_zone))
     print("Your total resources are: " + str(player1_resource_zone))
-    print("Unused resources: " + str(player1_unused_resources))
-    print("Your used resources are: " + str(player1_used_resources))
+    print("Unused resources: " + str(player1.resource_untapped))
+    print("Your used resources are: " + str(player1.resource_tapped))
 
     print("\n\nHere is you opponents board")
     print("Your opponent has " +
