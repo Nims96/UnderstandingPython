@@ -1,0 +1,7 @@
+Date & Time     	Message                                                         	Type	Detail	Source      	Process	Thread	ERROR_CODE	CHARACTER_ID	PLAYER_ID	LEADER_CHARACTER_ID	LEADER_PLAYER_ID	MAP_GAME_ID	MAP_INSTANCE_ID	CLAN_ID	GAME_EVENT_ID	CHAT_CH_TYPE	CHAT_CH_ID	ACCOUNT_ID	HANDLE	MATCH_ID	MATCH_QUEUE_ID
+24-04-2024 18:18:54.507	Connected to 20.55.234.69:9000                                  	0	8	Unknown     	7080	18940	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+24-04-2024 18:19:17.367	Thread ended: MctsPing                                          	3	8	Unknown     	7080	8496	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+24-04-2024 18:19:17.425	Thread ended: PackSession                                       	3	8	Unknown     	7080	18940	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+24-04-2024 18:19:17.425	CPackSocket PackThread exit                                     	3	4	Unknown     	7080	11436	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+24-04-2024 18:19:17.425	Thread ended: PackSocketIO                                      	3	8	Unknown     	7080	11436	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+End

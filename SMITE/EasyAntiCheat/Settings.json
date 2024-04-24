@@ -1,0 +1,9 @@
+{
+"title"                                         : "Smite",
+"executable"                                    : "Binaries\Win64\ShippingPC-BattleGame.exe",
+"productid"                                     : "f71b1231985f48d1af3de723e0a6acdd",
+"sandboxid"                                     : "076207fa2b5c4803a636af606c3c28b7",
+"deploymentid"                                  : "e03ac5a2b3444159b50aded07f1ed69b",
+"requested_splash"                              : "EasyAntiCheat/SplashScreen.png",
+"wait_for_game_process_exit"                    : "false"
+}

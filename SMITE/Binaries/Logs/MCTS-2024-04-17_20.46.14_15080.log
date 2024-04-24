@@ -1,0 +1,36 @@
+Date & Time     	Message                                                         	Type	Detail	Source      	Process	Thread	ERROR_CODE	CHARACTER_ID	PLAYER_ID	LEADER_CHARACTER_ID	LEADER_PLAYER_ID	MAP_GAME_ID	MAP_INSTANCE_ID	CLAN_ID	GAME_EVENT_ID	CHAT_CH_TYPE	CHAT_CH_ID	ACCOUNT_ID	HANDLE	MATCH_ID	MATCH_QUEUE_ID
+17-04-2024 20:46:30.231	Connected to 20.55.234.140:9000                                 	0	8	Unknown     	15080	17184	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 20:48:19.404	Thread ended: HiRezTrayPopup                                    	3	8	Unknown     	15080	20968	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 20:50:25.206	Connected to 162.244.55.201:9289                                	0	8	Unknown     	15080	2808	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 20:51:08.471	Thread ended: HiRezTrayPopup                                    	3	8	Unknown     	15080	7228	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 20:54:19.232	Unable to load SkeletalMeshComponent None                       	3	8	Unknown     	15080	20424	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:15:02.101	Unable to load SkeletalMeshComponent None                       	3	8	Unknown     	15080	20424	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:16:10.363	Unable to load SkeletalMeshComponent None                       	3	8	Unknown     	15080	20424	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:17:35.816	Unable to load SkeletalMeshComponent None                       	3	8	Unknown     	15080	20424	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:19:08.046	Unable to load SkeletalMeshComponent None                       	3	8	Unknown     	15080	20424	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:20:10.696	Unable to load SkeletalMeshComponent None                       	3	8	Unknown     	15080	20424	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:21:58.215	Unable to load SkeletalMeshComponent None                       	3	8	Unknown     	15080	20424	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:22:59.922	Unable to load SkeletalMeshComponent None                       	3	8	Unknown     	15080	20424	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:25:41.456	Unable to load SkeletalMeshComponent None                       	3	8	Unknown     	15080	20424	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:27:38.052	Unable to load SkeletalMeshComponent None                       	3	8	Unknown     	15080	20424	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:28:53.927	Unable to load SkeletalMeshComponent None                       	3	8	Unknown     	15080	20424	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:31:15.077	Thread ended: PackSession                                       	3	8	Unknown     	15080	2808	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:31:15.077	CPackSocket PackThread exit                                     	3	4	Unknown     	15080	18840	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:31:15.077	Thread ended: PackSocketIO                                      	3	8	Unknown     	15080	18840	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 21:48:19.796	Connected to 162.244.55.216:9234                                	0	8	Unknown     	15080	23912	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 22:07:30.713	Thread ended: PackSession                                       	3	8	Unknown     	15080	23912	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 22:07:30.713	CPackSocket PackThread exit                                     	3	4	Unknown     	15080	21364	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 22:07:30.713	Thread ended: PackSocketIO                                      	3	8	Unknown     	15080	21364	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 22:12:17.882	Connected to 162.244.55.179:9104                                	0	8	Unknown     	15080	18176	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 22:38:09.943	Thread ended: PackSession                                       	3	8	Unknown     	15080	18176	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 22:38:09.943	CPackSocket PackThread exit                                     	3	4	Unknown     	15080	23772	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 22:38:09.943	Thread ended: PackSocketIO                                      	3	8	Unknown     	15080	23772	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 22:40:37.370	Connected to 162.244.55.168:9267                                	0	8	Unknown     	15080	20536	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 23:16:13.490	Thread ended: PackSession                                       	3	8	Unknown     	15080	20536	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 23:16:13.490	CPackSocket PackThread exit                                     	3	4	Unknown     	15080	18696	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 23:16:13.490	Thread ended: PackSocketIO                                      	3	8	Unknown     	15080	18696	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 23:21:26.344	Thread ended: MctsPing                                          	3	8	Unknown     	15080	12748	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 23:21:26.406	Thread ended: PackSession                                       	3	8	Unknown     	15080	17184	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 23:21:26.406	CPackSocket PackThread exit                                     	3	4	Unknown     	15080	17812	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+17-04-2024 23:21:26.406	Thread ended: PackSocketIO                                      	3	8	Unknown     	15080	17812	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+End

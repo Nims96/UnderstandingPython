@@ -1,0 +1,31 @@
+"InstallScript"
+{
+	"Run Process"
+	{
+		"PR7b"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\SOFTWARE\\HiRez Studios"
+			"process 1"		"%INSTALLDIR%\\Binaries\\Redist\\UE3Redist_vs2012.exe"
+			"command 1"		"/Q"
+			"NoCleanUp"		"1"
+		}
+		"PR7c"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\SOFTWARE\\HiRez Studios"
+			"process 1"		"%INSTALLDIR%\\Binaries\\Redist\\UE3Redist_vs2010.exe"
+			"command 1"		"/Q"
+			"NoCleanUp"		"1"
+		}
+		"EACEPICSMITE"
+		{
+			"HasRunKey"		"HKEY_LOCAL_MACHINE\\SOFTWARE\\HiRez Studios"
+			"process 1"		"%INSTALLDIR%\\EasyAntiCheat\\EasyAntiCheat_EOS_Setup.exe"
+			"command 1"		"install f71b1231985f48d1af3de723e0a6acdd"
+			"NoCleanUp"		"1"
+		}
+	}
+}
+"kvsignatures"
+{
+	"InstallScript"		"1632034758bd1e675310b4f7de6fd5a660a4f1fbeb5e709180fcd572c0bfaa1481779cb755ac34a2245111bcd293e860580cd68024bd0c2042e2990e0adb855e824f8081af2bc2a7a4f3b76131fb65dbfcf26971fa85d91146727531db3756038169b1d7c61eed315978a7ebb4202132bba06b944c69a32925ba713a01a060ce"
+}
